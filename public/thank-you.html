@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Almost There - Japanese Grimoire Society</title>
+<meta name="description" content="Your invitation to the Japanese Grimoire Society is on its way to your inbox.">
+<link rel="icon" type="image/webp" href="images/logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Noto+Serif+JP:wght@300;400&display=swap">
+<style>
+:root{
+  --violet:#8300eb;--violet-deep:#5a00a8;--violet-glow:rgba(131,0,235,0.35);
+  --green:#00a86b;--gold:#b8862a;--gold-light:#d4a843;
+  --cream:#f0ebe2;--cream-dim:rgba(240,235,226,0.72);
+  --dark:#06030f;--dark-mid:#0d0820;--dark-card:rgba(13,8,32,0.88);
+  --border:rgba(131,0,235,0.28);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--dark);color:var(--cream);font-family:'Crimson Pro',Georgia,serif;font-size:20px;line-height:1.8;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;opacity:.4;pointer-events:none;z-index:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.05'/%3E%3C/svg%3E")}
+
+.kanji-bg{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;z-index:0;overflow:hidden}
+.kanji-bg img{width:clamp(320px,55vw,720px);height:auto;opacity:.06;
+  filter:drop-shadow(0 0 80px rgba(131,0,235,.25));user-select:none}
+
+.page-wrapper{position:relative;z-index:1;min-height:100vh;display:flex;flex-direction:column}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.2rem 2.5rem;
+  display:flex;align-items:center;justify-content:space-between;
+  background:linear-gradient(to bottom,rgba(6,3,15,.97),transparent);backdrop-filter:blur(6px)}
+.nav-brand{display:flex;align-items:center;gap:.7rem}
+.nav-mark{width:34px;height:34px;border-radius:50%;display:block;
+  box-shadow:0 0 12px rgba(131,0,235,.45)}
+.nav-logo{font-family:'Cinzel',serif;font-size:.88rem;font-weight:600;letter-spacing:.15em;color:var(--gold);text-transform:uppercase}
+.nav-kanji{font-family:'Noto Serif JP',serif;font-size:1rem;color:rgba(131,0,235,.55);letter-spacing:.2em}
+
+.container{max-width:880px;margin:0 auto;padding:0 2rem}
+.divider{height:1px;background:linear-gradient(to right,transparent,var(--border),transparent)}
+
+/* hero */
+.ty-hero{flex:1;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;text-align:center;padding:8rem 2rem 4rem;position:relative}
+.ty-hero::before{content:'';position:absolute;top:20%;left:50%;transform:translateX(-50%);
+  width:700px;height:700px;
+  background:radial-gradient(ellipse,rgba(131,0,235,.12) 0%,transparent 70%);pointer-events:none}
+
+.ty-check{font-size:3rem;margin-bottom:1.5rem;
+  opacity:0;animation:fadeUp .8s ease forwards .2s}
+.ty-headline{font-family:'Cinzel',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:700;
+  line-height:1.2;color:var(--cream);margin-bottom:1.2rem;
+  opacity:0;animation:fadeUp .8s ease forwards .4s}
+.ty-headline em{font-style:normal;color:var(--green)}
+.ty-sub{font-size:clamp(1.1rem,2.5vw,1.35rem);color:var(--cream-dim);
+  max-width:560px;line-height:1.9;margin-bottom:.8rem;
+  opacity:0;animation:fadeUp .8s ease forwards .6s}
+.ty-spam-note{font-size:1rem;color:var(--gold-light);font-style:italic;
+  opacity:0;animation:fadeUp .8s ease forwards .8s}
+
+/* video */
+.ty-video{padding:4rem 0;position:relative}
+.ty-video::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at center,rgba(131,0,235,.07) 0%,transparent 65%);pointer-events:none}
+.video-wrap{position:relative;width:100%;max-width:780px;margin:0 auto;
+  aspect-ratio:16/9;border-radius:4px;overflow:hidden;
+  border:1px solid var(--border);
+  box-shadow:0 0 60px rgba(131,0,235,.15)}
+.video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-caption{text-align:center;margin-top:1.2rem;font-size:.92rem;color:var(--cream-dim);
+  font-style:italic;max-width:600px;margin-left:auto;margin-right:auto}
+
+/* steps */
+.ty-steps{padding:5rem 0;text-align:center}
+.ty-steps-label{font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.35em;
+  color:var(--gold);text-transform:uppercase;margin-bottom:2.5rem}
+.steps-grid{display:grid;grid-template-columns:repeat(2,1fr);
+  gap:1.5rem;max-width:780px;margin:0 auto;text-align:center}
+.step-card{background:rgba(13,8,32,.65);border:1px solid var(--border);border-radius:3px;
+  padding:2rem 1.5rem;position:relative;overflow:hidden;
+  transition:border-color .3s,transform .3s}
+.step-card:hover{border-color:rgba(131,0,235,.5);transform:translateY(-3px)}
+.step-num{font-family:'Cinzel',serif;font-size:.72rem;font-weight:600;
+  width:28px;height:28px;border-radius:50%;background:var(--violet);color:white;
+  display:flex;align-items:center;justify-content:center;margin:0 auto .9rem}
+.step-text{font-size:1.05rem;color:var(--cream-dim);line-height:1.6}
+.step-text strong{color:var(--cream);font-weight:600}
+
+/* footer */
+footer{padding:2.5rem 2rem;text-align:center;border-top:1px solid var(--border);position:relative;z-index:1}
+.footer-brand{font-family:'Cinzel',serif;font-size:.75rem;letter-spacing:.2em;color:var(--gold);margin-bottom:.8rem}
+.footer-links{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap}
+.footer-links a{color:rgba(240,235,226,.3);text-decoration:none;font-size:.82rem;letter-spacing:.1em;transition:color .3s}
+.footer-links a:hover{color:var(--cream-dim)}
+.footer-copy{margin-top:.8rem;font-size:.76rem;color:rgba(240,235,226,.2)}
+
+/* animations */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+@media(max-width:760px){
+  body{font-size:18px}
+  .steps-grid{grid-template-columns:1fr}
+  nav{padding:1rem 1.2rem}
+  .nav-kanji{display:none}
+  .ty-hero{padding:6rem 1.5rem 3rem}
+}
+</style>
+</head>
+<body>
+
+<div class="kanji-bg" aria-hidden="true"><img src="images/logo.webp" alt="" width="800" height="800"></div>
+
+<nav>
+  <div class="nav-brand">
+    <img class="nav-mark" src="images/logo.webp" alt="Japanese Grimoire Society logo" width="34" height="34">
+    <span class="nav-logo">Japanese Grimoire Society</span>
+  </div>
+  <div class="nav-kanji">&#x81E8;&#x5175;&#x9B6A;&#x8005;&#x768A;&#x9663;&#x5217;&#x5728;&#x524D;</div>
+</nav>
+
+<div class="page-wrapper">
+
+  <section class="ty-hero">
+    <div class="ty-check">&#x2714;&#xFE0F;</div>
+    <h1 class="ty-headline">One Step Left. <em>Confirm Your Email.</em></h1>
+    <p class="ty-sub">We just sent you a confirmation link. Click it - and your invitation to the Japanese Grimoire Society follows right after.</p>
+    <p class="ty-spam-note">Check your spam folder if you don&rsquo;t see it within 2 minutes.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="ty-video reveal">
+    <div class="container">
+      <div class="video-wrap">
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/DY33kuViFKE?si=0yfEhGntNXtjYe3R" title="The Real Curse Book Behind Jujutsu Kaisen - A Japanese Scholar Shows You" loading="lazy" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <p class="video-caption">The Real Curse Book Behind Jujutsu Kaisen - A Japanese Scholar Shows You</p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="ty-steps reveal">
+    <div class="container">
+      <p class="ty-steps-label">What Happens Next</p>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <p class="step-text"><strong>Confirm your email</strong> - click the link we just sent you</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <p class="step-text">You receive your <strong>community invitation</strong> by email</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <p class="step-text">You join the <strong>Japanese Grimoire Society</strong> - free</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">4</div>
+          <p class="step-text">Start with <strong>THE FIRST TOUCH</strong> - feel Ki energy between your hands</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p class="footer-brand">JAPANESE GRIMOIRE SOCIETY</p>
+  <div class="footer-links">
+    <a href="https://japanesegrimoire.com">japanesegrimoire.com</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Impressum</a>
+  </div>
+  <p class="footer-copy">&copy; 2026 Dr. Mark Hosak &middot; japanesegrimoire.com &middot; All rights reserved.</p>
+</footer>
+
+<script>
+const reveals=document.querySelectorAll('.reveal');
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.1});
+reveals.forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
