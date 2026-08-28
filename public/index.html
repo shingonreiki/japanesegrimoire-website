@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Japanese Grimoire Society - The Real Tradition Behind Naruto, Jujutsu Kaisen & Demon Slayer</title>
+<meta name="description" content="The hand signs, spirits and cursed energy you've seen in anime - none of it was invented. Get your free invitation to the Japanese Grimoire Society with Dr. Mark Hosak.">
+<meta property="og:title" content="Japanese Grimoire Society - The Real Tradition Behind the Anime">
+<meta property="og:description" content="The hand signs, spirits and cursed energy you've seen in anime - none of it was invented. Free invitation to the community.">
+<meta property="og:image" content="https://japanesegrimoire.com/images/hero-bg.webp">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://japanesegrimoire.com/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/webp" href="images/logo.webp">
+<link rel="canonical" href="https://japanesegrimoire.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Noto+Serif+JP:wght@300;400&display=swap">
+<style>
+:root{
+  --violet:#8300eb;--violet-deep:#5a00a8;--violet-glow:rgba(131,0,235,0.35);
+  --green:#00a86b;--gold:#b8862a;--gold-light:#d4a843;
+  --cream:#f0ebe2;--cream-dim:rgba(240,235,226,0.88);
+  --dark:#06030f;--dark-mid:#0d0820;--dark-card:rgba(13,8,32,0.88);
+  --border:rgba(131,0,235,0.28);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--dark);color:var(--cream);font-family:'Crimson Pro',Georgia,serif;font-size:20px;line-height:1.8;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;opacity:.4;pointer-events:none;z-index:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.05'/%3E%3C/svg%3E")}
+
+/* logo background - subtle Hrih seed syllable behind content */
+.kanji-bg{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;z-index:0;overflow:hidden}
+.kanji-bg img{width:clamp(320px,55vw,720px);height:auto;opacity:.06;
+  filter:drop-shadow(0 0 80px rgba(131,0,235,.25));user-select:none}
+
+.page-wrapper{position:relative;z-index:1}
+
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.2rem 2.5rem;
+  display:flex;align-items:center;justify-content:space-between;
+  background:linear-gradient(to bottom,rgba(6,3,15,.97),transparent);backdrop-filter:blur(6px)}
+.nav-brand{display:flex;align-items:center;gap:.7rem}
+.nav-mark{width:34px;height:34px;border-radius:50%;display:block;
+  box-shadow:0 0 12px rgba(131,0,235,.45)}
+.nav-logo{font-family:'Cinzel',serif;font-size:.88rem;font-weight:600;letter-spacing:.15em;color:var(--gold);text-transform:uppercase}
+.nav-kanji{font-family:'Noto Serif JP',serif;font-size:1rem;color:rgba(131,0,235,.55);letter-spacing:.2em}
+
+
+/* image placeholder component */
+.img-ph{background:linear-gradient(135deg,rgba(13,8,32,.95),rgba(90,0,168,.18));
+  border:1px dashed rgba(131,0,235,.38);border-radius:4px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:.7rem;padding:2.5rem;text-align:center;
+  color:rgba(131,0,235,.52);font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.18em;line-height:1.9}
+.img-ph .ph-icon{font-size:2.2rem;opacity:.55}
+
+/* hero */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:flex-start;
+  justify-content:center;text-align:left;padding:8rem 2rem 5rem;position:relative;
+  background:var(--dark);overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0;
+  background:url('images/hero-bg.webp') center/cover no-repeat;
+  animation:imgFlicker 16s ease-in-out infinite}
+.hero::before{content:'';position:absolute;inset:0;
+  background:linear-gradient(to right,rgba(6,3,15,1) 0%,rgba(6,3,15,.95) 45%,rgba(6,3,15,.65) 70%,rgba(6,3,15,.4) 90%,rgba(6,3,15,.5) 100%);
+  pointer-events:none;z-index:1}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:250px;
+  background:linear-gradient(to bottom,transparent,var(--dark));pointer-events:none;z-index:1}
+.hero-content{position:relative;z-index:2;max-width:880px;padding:0 2rem}
+
+
+/* energy particles */
+.hero-particles{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.particle{position:absolute;border-radius:50%;animation:floatUp linear infinite;opacity:0}
+.particle:nth-child(1){width:3px;height:3px;background:rgba(131,0,235,.5);left:15%;animation-duration:12s;animation-delay:0s}
+.particle:nth-child(2){width:2px;height:2px;background:rgba(100,140,255,.4);left:35%;animation-duration:15s;animation-delay:2s}
+.particle:nth-child(3){width:4px;height:4px;background:rgba(131,0,235,.35);left:55%;animation-duration:10s;animation-delay:4s}
+.particle:nth-child(4){width:2px;height:2px;background:rgba(180,134,42,.4);left:70%;animation-duration:14s;animation-delay:1s}
+.particle:nth-child(5){width:3px;height:3px;background:rgba(100,140,255,.35);left:85%;animation-duration:11s;animation-delay:3s}
+.particle:nth-child(6){width:2px;height:2px;background:rgba(131,0,235,.4);left:25%;animation-duration:13s;animation-delay:5s}
+.particle:nth-child(7){width:3px;height:3px;background:rgba(180,134,42,.3);left:45%;animation-duration:16s;animation-delay:7s}
+.particle:nth-child(8){width:2px;height:2px;background:rgba(100,140,255,.4);left:65%;animation-duration:12s;animation-delay:6s}
+.particle:nth-child(9){width:3px;height:3px;background:rgba(131,0,235,.35);left:10%;animation-duration:14s;animation-delay:8s}
+.particle:nth-child(10){width:2px;height:2px;background:rgba(100,140,255,.3);left:80%;animation-duration:11s;animation-delay:3.5s}
+
+
+.hero-eyebrow{font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.28em;color:var(--gold-light);
+  text-transform:uppercase;margin-bottom:2rem;text-shadow:2px 3px 2px rgba(0,0,0,.8);
+  opacity:0;animation:fadeUp .8s ease forwards .2s}
+.hero h1{font-family:'Cinzel',serif;font-size:clamp(2.1rem,4.5vw,3.9rem);font-weight:700;
+  line-height:1.15;color:var(--cream);margin-bottom:1.6rem;
+  text-shadow:2px 3px 2px rgba(0,0,0,.8);
+  opacity:0;animation:fadeUp .8s ease forwards .4s}
+.hero h1 em{font-style:normal;color:var(--violet);text-shadow:2px 3px 2px rgba(0,0,0,.8)}
+.hero-sub{font-size:clamp(1.15rem,2.5vw,1.45rem);color:var(--cream-dim);
+  max-width:580px;line-height:1.9;
+  opacity:0;animation:fadeUp .8s ease forwards .6s}
+.hero-kanji-line{font-family:'Noto Serif JP',serif;font-size:1.15rem;
+  color:rgba(240,235,226,.55);text-shadow:0 0 20px rgba(131,0,235,.42);
+  letter-spacing:.5em;margin:1.8rem 0 2.8rem;
+  opacity:0;animation:fadeUp .8s ease forwards .8s}
+.hero-cta{width:auto;max-width:none;margin-top:1rem;padding:1.15rem 2.4rem;
+  opacity:0;animation:fadeUp .8s ease forwards 1.2s}
+
+/* layout helpers */
+section{position:relative;z-index:1}
+.container{max-width:880px;margin:0 auto;padding:0 2rem}
+.section-pad{padding:6rem 0}
+.divider{height:1px;background:linear-gradient(to right,transparent,var(--border),transparent)}
+
+/* hook */
+.hook{padding:5.5rem 0;text-align:center}
+.hook-text{font-size:clamp(1.2rem,2.5vw,1.5rem);line-height:2;color:var(--cream-dim);
+  max-width:720px;margin:0 auto 1.5rem}
+.hook-text strong{color:var(--cream);font-weight:600}
+.hook-statement{font-family:'Cinzel',serif;font-size:clamp(1.15rem,2.5vw,1.65rem);
+  color:var(--cream);line-height:1.7;max-width:640px;margin:0 auto}
+.hook-statement em{font-style:italic;color:var(--gold-light)}
+
+/* morpheus */
+.morpheus{padding:5rem 0}
+.morpheus-inner{display:grid;grid-template-columns:1fr 3px 1fr;gap:3rem;align-items:start}
+.morpheus-left{text-align:right}
+.morpheus-vline{width:3px;background:linear-gradient(to bottom,transparent,var(--violet),transparent);min-height:220px}
+.morpheus-q{font-family:'Cinzel',serif;font-size:1rem;color:var(--gold);letter-spacing:.08em;margin-bottom:1rem}
+.morpheus-a{font-size:1.15rem;color:var(--cream-dim);line-height:1.9}
+.morpheus-a strong{color:var(--cream);display:block;margin-top:.5rem}
+.hi-green{color:var(--green);font-weight:600}
+
+/* feeling */
+.feeling{padding:4rem 0;text-align:center}
+.feeling-q{font-family:'Crimson Pro',serif;font-style:italic;font-size:clamp(1.4rem,3vw,1.9rem);
+  color:var(--cream);max-width:620px;margin:0 auto 1rem;line-height:1.6}
+.feeling-a{font-family:'Cinzel',serif;font-size:1rem;color:var(--violet);
+  letter-spacing:.18em;text-shadow:0 0 25px var(--violet-glow)}
+
+/* optin */
+.optin{padding:6rem 0;position:relative}
+.optin::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at center,rgba(131,0,235,.09) 0%,transparent 70%);pointer-events:none}
+.optin-card{background:var(--dark-card);border:1px solid var(--border);border-radius:4px;
+  padding:4rem 3.5rem;text-align:center;position:relative;overflow:hidden;
+  box-shadow:0 0 80px rgba(131,0,235,.12),inset 0 1px 0 rgba(131,0,235,.2)}
+.optin-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(to right,transparent,var(--violet),var(--green),transparent)}
+
+/* step indicator */
+.optin-steps{display:flex;justify-content:center;align-items:center;gap:.8rem;
+  margin-bottom:2.2rem;flex-wrap:wrap}
+.step{display:flex;align-items:center;gap:.5rem;font-size:.9rem;color:var(--cream-dim);letter-spacing:.03em}
+.step-num{width:26px;height:26px;border-radius:50%;background:var(--violet);color:white;
+  font-family:'Cinzel',serif;font-size:.72rem;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.step-arrow{color:rgba(131,0,235,.45);font-size:.9rem}
+
+.optin-headline{font-family:'Cinzel',serif;font-size:clamp(1.5rem,3vw,2.1rem);font-weight:700;color:var(--cream);margin-bottom:.8rem}
+.optin-sub{color:var(--cream-dim);font-size:1.12rem;margin-bottom:.5rem;line-height:1.7}
+.optin-sub strong{color:var(--gold-light)}
+.optin-clarify{font-size:1rem;color:var(--green);margin-bottom:2.5rem;font-style:italic}
+
+.form-group{display:flex;flex-direction:column;gap:1rem;max-width:480px;margin:0 auto 1.5rem}
+.form-input{width:100%;padding:1.05rem 1.3rem;background:rgba(240,235,226,.05);
+  border:1px solid rgba(131,0,235,.3);border-radius:3px;color:var(--cream);
+  font-family:'Crimson Pro',serif;font-size:1.1rem;outline:none;
+  transition:border-color .3s,box-shadow .3s}
+.form-input::placeholder{color:rgba(240,235,226,.45)}
+.form-input:focus{border-color:var(--violet);box-shadow:0 0 0 3px rgba(131,0,235,.12)}
+.btn-primary{display:inline-block;width:100%;max-width:480px;padding:1.15rem 2rem;
+  background:linear-gradient(135deg,var(--violet),var(--violet-deep));
+  color:var(--cream);font-family:'Cinzel',serif;font-size:1.05rem;font-weight:600;
+  letter-spacing:.1em;border:none;border-radius:3px;cursor:pointer;text-decoration:none;
+  text-align:center;transition:transform .2s,box-shadow .3s;
+  box-shadow:0 4px 35px rgba(131,0,235,.45)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 45px rgba(131,0,235,.65)}
+.form-note{font-size:.82rem;color:rgba(240,235,226,.5);margin-top:1rem;letter-spacing:.05em}
+.form-status{min-height:1.6em;margin:1rem 0 0;font-size:.95rem;line-height:1.5}
+.form-status.is-error{color:#ff8a8a}
+.form-status.is-success{color:var(--green)}
+.btn-primary[disabled]{opacity:.6;cursor:wait}
+.btn-primary[disabled]:hover{transform:none}
+
+.social-proof{display:flex;justify-content:center;gap:2.5rem;margin-top:2.5rem;
+  padding-top:2rem;border-top:1px solid var(--border);flex-wrap:wrap}
+.proof-item{text-align:center}
+.proof-icon{font-size:1.5rem;display:block;margin-bottom:.3rem}
+.proof-text{font-size:.9rem;color:var(--cream-dim)}
+
+/* course preview */
+.course-preview{padding:4rem 0}
+.course-images{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.course-card{display:flex;flex-direction:column;gap:.9rem}
+.course-img{aspect-ratio:16/9;border-radius:3px;overflow:hidden;
+  border:1px solid var(--border);position:relative;
+  transition:transform .3s,border-color .3s,box-shadow .3s}
+.course-img:hover{transform:translateY(-3px);border-color:rgba(131,0,235,.55);
+  box-shadow:0 8px 30px rgba(131,0,235,.18)}
+.course-img img{width:100%;height:100%;object-fit:cover;display:block}
+.course-caption{font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.08em;
+  color:var(--cream-dim);text-align:center;line-height:1.6;padding:0 .3rem}
+.course-caption strong{color:var(--cream);font-weight:600;display:block;margin-bottom:.3rem;letter-spacing:.1em}
+
+/* offerings */
+.what-you-find{padding:5.5rem 0;text-align:center}
+.section-label{font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.35em;color:var(--gold-light);text-transform:uppercase;margin-bottom:1rem}
+.section-title{font-family:'Cinzel',serif;font-size:clamp(1.5rem,3vw,2.3rem);color:var(--cream);font-weight:600;margin-bottom:3.5rem;line-height:1.3}
+.offerings-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;text-align:left}
+.offering-card{background:rgba(13,8,32,.65);border:1px solid var(--border);border-radius:3px;
+  padding:2rem;transition:border-color .3s,transform .3s;position:relative;overflow:hidden}
+.offering-card:hover{border-color:rgba(131,0,235,.5);transform:translateY(-3px)}
+.offering-icon{font-size:1.6rem;display:block;margin-bottom:.9rem}
+.offering-title{font-family:'Cinzel',serif;font-size:.92rem;color:var(--cream);letter-spacing:.05em;margin-bottom:.6rem}
+.offering-desc{font-size:1rem;color:rgba(240,235,226,.75);line-height:1.65}
+
+/* credentials */
+.credentials{padding:5.5rem 0}
+.credentials-inner{display:grid;grid-template-columns:220px 1fr;gap:3.5rem;align-items:start}
+.cred-photo-wrap{position:relative;width:200px}
+.cred-photo{width:200px;height:200px;border-radius:50%;border:2px solid var(--border);
+  background:linear-gradient(135deg,var(--violet-deep),var(--dark-mid));
+  display:flex;align-items:center;justify-content:center;overflow:hidden;
+  position:relative;z-index:1}
+.cred-photo img{width:100%;height:100%;object-fit:cover;object-position:35% 15%;border-radius:50%}
+.cred-photo-label{font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.18em;
+  color:rgba(131,0,235,.48);text-align:center;padding:1rem;line-height:2}
+.cred-photo-wrap::before{content:'';position:absolute;top:-4px;left:-4px;
+  width:208px;height:208px;border-radius:50%;
+  background:conic-gradient(var(--violet),var(--green),var(--gold),var(--violet));
+  z-index:0;opacity:.4;animation:spinRing 8s linear infinite}
+.cred-name{font-family:'Cinzel',serif;font-size:1.5rem;color:var(--cream);margin-bottom:.4rem}
+.cred-title{font-size:.92rem;color:var(--gold);letter-spacing:.1em;margin-bottom:1.8rem}
+.cred-list{list-style:none;display:flex;flex-direction:column;gap:.7rem}
+.cred-list li{font-size:1.05rem;color:var(--cream-dim);padding-left:1.5rem;position:relative}
+.cred-list li::before{content:'ⓔ';font-family:'Cinzel',serif;font-size:.6rem;
+  position:absolute;left:0;color:var(--violet);top:.28rem}
+
+/* final cta */
+.final-cta{padding:7rem 0;text-align:center;position:relative}
+.final-cta::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at center bottom,rgba(131,0,235,.13) 0%,transparent 60%);pointer-events:none}
+.final-statement{font-family:'Crimson Pro',serif;font-style:italic;
+  font-size:clamp(1.5rem,3vw,2.1rem);color:var(--cream);max-width:660px;margin:0 auto 1rem;line-height:1.55}
+.final-sub{color:var(--cream-dim);font-size:1.1rem;margin-bottom:2.5rem}
+
+/* footer */
+footer{padding:2.5rem 2rem;text-align:center;border-top:1px solid var(--border);position:relative;z-index:1}
+.footer-brand{font-family:'Cinzel',serif;font-size:.75rem;letter-spacing:.2em;color:var(--gold);margin-bottom:.8rem}
+.footer-links{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap}
+.footer-links a{color:rgba(240,235,226,.5);text-decoration:none;font-size:.82rem;letter-spacing:.1em;transition:color .3s}
+.footer-links a:hover{color:var(--cream-dim)}
+.footer-copy{margin-top:.8rem;font-size:.76rem;color:rgba(240,235,226,.4)}
+
+/* animations */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes floatUp{0%{transform:translateY(100vh) translateX(0);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translateY(-20px) translateX(30px);opacity:0}}
+@keyframes imgFlicker{
+  0%,29%,33%,64%,66%,100%{filter:brightness(1)}
+  30%{filter:brightness(1.7)}
+  31%{filter:brightness(1.2)}
+  32%{filter:brightness(1.55)}
+  65%{filter:brightness(1.85)}
+}
+@keyframes spinRing{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* responsive */
+@media(max-width:760px){
+  body{font-size:18px}
+  .hero h1{font-size:clamp(1.6rem,4vw,2.8rem)}
+  .morpheus-inner{grid-template-columns:1fr;gap:2rem}
+  .morpheus-vline{display:none}
+  .morpheus-left{text-align:left}
+  .credentials-inner{grid-template-columns:1fr}
+  .cred-photo-wrap{margin:0 auto}
+  .course-images{grid-template-columns:1fr;gap:1.5rem}
+  .optin-card{padding:2.5rem 1.5rem}
+  nav{padding:1rem 1.2rem}
+  .nav-kanji{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="kanji-bg" aria-hidden="true"><img src="images/logo.webp" alt="" width="800" height="800"></div>
+
+
+<nav>
+  <div class="nav-brand">
+    <img class="nav-mark" src="images/logo.webp" alt="Japanese Grimoire Society logo" width="34" height="34">
+    <span class="nav-logo">Japanese Grimoire Society</span>
+  </div>
+  <div class="nav-kanji">&#x81E8;&#x5175;&#x9B6A;&#x8005;&#x768A;&#x9663;&#x5217;&#x5728;&#x524D;</div>
+</nav>
+
+<div class="page-wrapper">
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-particles">
+      <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+      <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+      <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Dr. Mark Hosak &middot; PhD Japanese Studies &middot; Shingon Practitioner &middot; Ninjutsu Grandmaster</p>
+      <h1>You&rsquo;ve Seen It in <em>Naruto</em>.<br>In <em>Jujutsu Kaisen</em>.<br>In <em>Demon Slayer</em>.</h1>
+      <p class="hero-sub">The hand signs. The spirits. The cursed energy.<br>None of it was invented.</p>
+      <div class="hero-kanji-line">&#x81E8; &#x5175; &#x9B6A; &#x8005; &#x768A; &#x9663; &#x5217; &#x5728; &#x524D;</div>
+      <a href="#join" class="btn-primary hero-cta">Get My Free Invitation &rarr;</a>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="hook reveal">
+    <div class="container">
+      <p class="hook-text">Behind every anime that ever made you feel like <strong>something real was happening</strong> - there is a tradition that goes back over a thousand years.</p>
+      <p class="hook-text">The real hand signs. The real spirits. The real texts Japan has preserved in its temples and monasteries for centuries.</p>
+      <p class="hook-statement">You felt it watching.<br>You always knew.<br><br><em>That feeling was not wrong.</em></p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="morpheus section-pad reveal">
+    <div class="container">
+      <div class="morpheus-inner">
+        <div class="morpheus-left">
+          <p class="morpheus-q">What if you could find the actual sources?</p>
+          <p class="morpheus-a">The real hand signs from the original Japanese texts.<br>The Buddhist spirits behind the most powerful anime characters you know.<br>The ancient scrolls and grimoires that the stories have been drawing from all along.<br><strong>Decoded. Explained. Made accessible.</strong></p>
+        </div>
+        <div class="morpheus-vline"></div>
+        <div class="morpheus-right">
+          <p class="morpheus-q">Not theory. Not wellness.</p>
+          <p class="morpheus-a">The real tradition.<br><span class="hi-green">Still alive. Still practiced.</span><br><br>30 years of research in Japan&rsquo;s original sources.<br>3 years living and working inside the temples of Kyoto.<br>A direct transmission from teacher to student.<br><br><strong>Now shared openly - for those ready to receive it.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="feeling reveal">
+    <div class="container">
+      <p class="feeling-q">&ldquo;You felt it watching. You always knew.&rdquo;</p>
+      <p class="feeling-a">THAT FEELING WAS NOT WRONG.</p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="optin reveal" id="join">
+    <div class="container">
+      <div class="optin-card">
+        <div class="optin-steps">
+          <div class="step"><div class="step-num">1</div><span>Enter your email</span></div>
+          <div class="step-arrow">&rarr;</div>
+          <div class="step"><div class="step-num">2</div><span>Confirm your email</span></div>
+          <div class="step-arrow">&rarr;</div>
+          <div class="step"><div class="step-num">3</div><span>Receive your invitation - free</span></div>
+        </div>
+        <h2 class="optin-headline">Get Your Free Invitation</h2>
+        <p class="optin-sub">Enter your email, confirm it - and we send you a personal invitation<br>to the <strong>Japanese Grimoire Society</strong>.</p>
+        <p class="optin-clarify">&#10003; Completely free. No credit card. No catch.</p>
+        <form id="jg-optin-form" class="optin-form" novalidate>
+          <div class="form-group">
+            <input type="text" name="firstName" id="jg-first-name" class="form-input" placeholder="Your first name" autocomplete="given-name" required>
+            <input type="email" name="email" id="jg-email" class="form-input" placeholder="Your email address" autocomplete="email" required>
+          </div>
+          <button type="submit" class="btn-primary" id="jg-submit-btn">Send My Invitation &rarr;</button>
+          <p class="form-status" id="jg-form-status" role="status" aria-live="polite"></p>
+        </form>
+        <p class="form-note">Your information is safe. No spam. Unsubscribe anytime.</p>
+        <div class="social-proof">
+          <div class="proof-item"><span class="proof-icon">&#x1F38C;</span><span class="proof-text">Growing community<br>of real seekers</span></div>
+          <div class="proof-item"><span class="proof-icon">&#x1F4DC;</span><span class="proof-text">15 courses -<br>beginner to initiation</span></div>
+          <div class="proof-item"><span class="proof-icon">&#x26A1;</span><span class="proof-text">Free to join.<br>Go as deep as you want.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="course-preview reveal">
+    <div class="container">
+      <p class="section-label" style="text-align:center;margin-bottom:1.5rem">A glimpse of what is inside</p>
+      <div class="course-images">
+        <div class="course-card">
+          <div class="course-img"><img src="images/glimpse-1-start-here.webp" alt="Start here - your path into the Japanese Grimoire" width="2752" height="1536" loading="lazy"></div>
+          <p class="course-caption"><strong>Start Here</strong>Your path into the Japanese Grimoire</p>
+        </div>
+        <div class="course-card">
+          <div class="course-img"><img src="images/glimpse-2-living-roots.webp" alt="Shinto, Shingon, Shugendo - the living roots of Japanese tradition" width="2752" height="1536" loading="lazy"></div>
+          <p class="course-caption"><strong>Shinto &middot; Shingon &middot; Shugendo</strong>The living roots of Japanese tradition</p>
+        </div>
+        <div class="course-card">
+          <div class="course-img"><img src="images/glimpse-3-first-touch.webp" alt="The First Touch - feel the energy, your first step" width="2752" height="1536" loading="lazy"></div>
+          <p class="course-caption"><strong>The First Touch</strong>Feel the energy - your first step</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="what-you-find section-pad reveal">
+    <div class="container">
+      <p class="section-label">Inside the Japanese Grimoire Society</p>
+      <h2 class="section-title">What You Will Find</h2>
+      <div class="offerings-grid">
+        <div class="offering-card"><span class="offering-icon">&#x1F38C;</span><div class="offering-title">The Real Hand Signs</div><div class="offering-desc">The nine hand signs from Naruto - decoded from the original Japanese texts. Where they come from. What they actually do.</div></div>
+        <div class="offering-card"><span class="offering-icon">&#x1F4DC;</span><div class="offering-title">Original Japanese Grimoires</div><div class="offering-desc">Ancient Japanese scrolls and texts that almost no one in the West has ever read - decoded and explained in plain English.</div></div>
+        <div class="offering-card"><span class="offering-icon">&#x26E9;&#xFE0F;</span><div class="offering-title">Shinto, Shingon &amp; Mountain Practice</div><div class="offering-desc">The three living roots of Japanese spiritual tradition. Where anime gets its deepest material - and where it still lives today.</div></div>
+        <div class="offering-card"><span class="offering-icon">&#x1FAB7;</span><div class="offering-title">Reiki - The Real Origins</div><div class="offering-desc">What Reiki really was before the West simplified it. The original practices. The Buddhist figures behind the healing symbols.</div></div>
+        <div class="offering-card"><span class="offering-icon">&#x26A1;</span><div class="offering-title">Real Initiations</div><div class="offering-desc">Transmissions from an unbroken lineage - not certificates. The kind of direct passing-on that the tradition has always used.</div></div>
+        <div class="offering-card"><span class="offering-icon">&#x1F409;</span><div class="offering-title">Anime &amp; Real Japanese Magic</div><div class="offering-desc">The bridge between what you watched and what was always really there. The tradition the stories were drawing from all along.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="credentials section-pad reveal">
+    <div class="container">
+      <div class="credentials-inner">
+        <div class="cred-photo-wrap">
+          <div class="cred-photo">
+            <img src="images/mark-hosak.webp" alt="Dr. Mark Hosak" width="3024" height="4032" loading="lazy">
+          </div>
+        </div>
+        <div class="cred-content">
+          <h3 class="cred-name">Dr. Mark Hosak</h3>
+          <p class="cred-title">PhD Japanese Studies &middot; Heidelberg University &middot; Founder of Shingon Reiki</p>
+          <ul class="cred-list">
+            <li>3 years research in Kyoto - inside the actual temples</li>
+            <li>Researcher and practitioner of the Shingon tradition</li>
+            <li>Ninjutsu Grandmaster - successor of Taguchi Sensei</li>
+            <li>Bestselling author - The Big Book of Reiki Symbols</li>
+            <li>Completed the Shikoku Pilgrimage - all 88 temples</li>
+            <li>Authentic Vodou initiation</li>
+            <li>Daily practice in Bagua Zhang</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="final-cta reveal">
+    <div class="container">
+      <p class="final-statement">For those who always knew there was something real behind it.</p>
+      <p class="final-sub">Free to join. The path goes as deep as you are willing to go.</p>
+      <a href="#join" class="btn-primary" style="display:inline-block;max-width:380px">Get My Free Invitation &rarr;</a>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p class="footer-brand">JAPANESE GRIMOIRE SOCIETY</p>
+  <div class="footer-links">
+    <a href="https://japanesegrimoire.com">japanesegrimoire.com</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Impressum</a>
+  </div>
+  <p class="footer-copy">&copy; 2026 Dr. Mark Hosak &middot; japanesegrimoire.com &middot; All rights reserved.</p>
+</footer>
+
+<script>
+const reveals=document.querySelectorAll('.reveal');
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.1});
+reveals.forEach(el=>obs.observe(el));
+
+(function(){
+  const form=document.getElementById('jg-optin-form');
+  if(!form)return;
+  const btn=document.getElementById('jg-submit-btn');
+  const status=document.getElementById('jg-form-status');
+  const firstName=document.getElementById('jg-first-name');
+  const email=document.getElementById('jg-email');
+  const original=btn.innerHTML;
+  const setStatus=(msg,kind)=>{status.textContent=msg||'';status.className='form-status'+(kind?' is-'+kind:'');};
+  form.addEventListener('submit',async ev=>{
+    ev.preventDefault();
+    setStatus('','');
+    const emailVal=(email.value||'').trim();
+    const nameVal=(firstName.value||'').trim();
+    if(!nameVal){setStatus('Please enter your first name.','error');firstName.focus();return;}
+    if(!emailVal||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)){setStatus('Please enter a valid email address.','error');email.focus();return;}
+    btn.disabled=true;btn.innerHTML='Sending...';
+    try{
+      const fd=new FormData();fd.append('EMAIL',emailVal);fd.append('VORNAME',nameVal);fd.append('email_address_check','');fd.append('locale','en');const res=await fetch('https://dc276ca0.sibforms.com/serve/MUIFAK3fpJiNFfswdNu2AO5M-RKM1x3FtAWlQZ8fPDXdvGkHoPCiDKbq4X0UmKs6Diz5qE2Gdrkg_vWOYPxgxlvu9Ubd4Vv_lLKNcQEIOBzfN9GgG_UKBUpnVld2k5wvCnIxeJcKPe7LwB6ioMHB8KujB_rg8eiECf-sAEFm8Zp2XSzS8m36istfPoVL69fCpmgT6m_igc1yxSxyBg==?isAjax=1',{method:'POST',body:fd,headers:{'Accept':'application/json'}});
+      const data=await res.json().catch(()=>({}));
+      if(res.ok){window.location.href='/thank-you.html';return;}
+      setStatus((data&&data.error)||'Something went wrong. Please try again.','error');
+    }catch(err){
+      setStatus('Network problem. Please try again.','error');
+    }finally{btn.disabled=false;btn.innerHTML=original;}
+  });
+})();
+</script>
+</body>
+</html>
