@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /thank-you.html
+Disallow: /confirmed.html
+Sitemap: https://japanesegrimoire.com/sitemap.xml
