@@ -366,7 +366,6 @@ footer{padding:2.5rem 2rem;text-align:center;border-top:1px solid var(--border);
         <p class="optin-clarify">&#10003; Free. After that, a few letters from me about the real tradition behind the anime.</p>
         <form id="jg-optin-form" class="optin-form" novalidate>
           <div class="form-group">
-            <input type="text" name="firstName" id="jg-first-name" class="form-input" placeholder="Your first name" autocomplete="given-name" required>
             <input type="email" name="email" id="jg-email" class="form-input" placeholder="Your email address" autocomplete="email" required>
           </div>
           <button type="submit" class="btn-primary" id="jg-submit-btn">Send Me the Practice &rarr;</button>
@@ -480,7 +479,6 @@ reveals.forEach(el=>obs.observe(el));
   if(!form)return;
   const btn=document.getElementById('jg-submit-btn');
   const status=document.getElementById('jg-form-status');
-  const firstName=document.getElementById('jg-first-name');
   const email=document.getElementById('jg-email');
   const original=btn.innerHTML;
   const setStatus=(msg,kind)=>{status.textContent=msg||'';status.className='form-status'+(kind?' is-'+kind:'');};
@@ -488,12 +486,10 @@ reveals.forEach(el=>obs.observe(el));
     ev.preventDefault();
     setStatus('','');
     const emailVal=(email.value||'').trim();
-    const nameVal=(firstName.value||'').trim();
-    if(!nameVal){setStatus('Please enter your first name.','error');firstName.focus();return;}
     if(!emailVal||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)){setStatus('Please enter a valid email address.','error');email.focus();return;}
     btn.disabled=true;btn.innerHTML='Sending...';
     try{
-      const fd=new FormData();fd.append('EMAIL',emailVal);fd.append('VORNAME',nameVal);fd.append('email_address_check','');fd.append('locale','en');const res=await fetch('https://dc276ca0.sibforms.com/serve/MUIFAK3fpJiNFfswdNu2AO5M-RKM1x3FtAWlQZ8fPDXdvGkHoPCiDKbq4X0UmKs6Diz5qE2Gdrkg_vWOYPxgxlvu9Ubd4Vv_lLKNcQEIOBzfN9GgG_UKBUpnVld2k5wvCnIxeJcKPe7LwB6ioMHB8KujB_rg8eiECf-sAEFm8Zp2XSzS8m36istfPoVL69fCpmgT6m_igc1yxSxyBg==?isAjax=1',{method:'POST',body:fd,headers:{'Accept':'application/json'}});
+      const fd=new FormData();fd.append('EMAIL',emailVal);fd.append('email_address_check','');fd.append('locale','en');const res=await fetch('https://dc276ca0.sibforms.com/serve/MUIFAK3fpJiNFfswdNu2AO5M-RKM1x3FtAWlQZ8fPDXdvGkHoPCiDKbq4X0UmKs6Diz5qE2Gdrkg_vWOYPxgxlvu9Ubd4Vv_lLKNcQEIOBzfN9GgG_UKBUpnVld2k5wvCnIxeJcKPe7LwB6ioMHB8KujB_rg8eiECf-sAEFm8Zp2XSzS8m36istfPoVL69fCpmgT6m_igc1yxSxyBg==?isAjax=1',{method:'POST',body:fd,headers:{'Accept':'application/json'}});
       const data=await res.json().catch(()=>({}));
       if(res.ok){window.location.href='/thank-you.html';return;}
       setStatus((data&&data.error)||'Something went wrong. Please try again.','error');
