@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://japanesegrimoire.com/contact.html">
+<title>Contact - Japanese Grimoire Society</title>
+<meta name="description" content="Write to Dr. Mark Hosak directly. Every message reaches him personally.">
+<link rel="icon" type="image/webp" href="/images/logo.webp">
+<link rel="stylesheet" href="/fonts/google-selbst.css">
+<style>
+:root{
+  --violet:#8300eb;--violet-deep:#5a00a8;--violet-glow:rgba(131,0,235,0.35);
+  --green:#00a86b;--gold:#b8862a;--gold-light:#d4a843;
+  --cream:#f0ebe2;--cream-dim:rgba(240,235,226,0.72);
+  --dark:#06030f;--dark-mid:#0d0820;--dark-card:rgba(13,8,32,0.88);
+  --border:rgba(131,0,235,0.28);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--dark);color:var(--cream);font-family:'Crimson Pro',Georgia,serif;font-size:20px;line-height:1.8;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;opacity:.4;pointer-events:none;z-index:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.05'/%3E%3C/svg%3E")}
+
+.kanji-bg{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;z-index:0;overflow:hidden}
+.kanji-bg img{width:clamp(320px,55vw,720px);height:auto;opacity:.06;
+  filter:drop-shadow(0 0 80px rgba(131,0,235,.25));user-select:none}
+
+.page-wrapper{position:relative;z-index:1;min-height:100vh;display:flex;flex-direction:column}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.2rem 2.5rem;
+  display:flex;align-items:center;justify-content:space-between;
+  background:linear-gradient(to bottom,rgba(6,3,15,.97),transparent);backdrop-filter:blur(6px)}
+.nav-brand{display:flex;align-items:center;gap:.7rem}
+.nav-mark{width:34px;height:34px;border-radius:50%;display:block;
+  box-shadow:0 0 12px rgba(131,0,235,.45)}
+.nav-logo{font-family:'Cinzel',serif;font-size:.88rem;font-weight:600;letter-spacing:.15em;color:var(--gold);text-transform:uppercase}
+.nav-kanji{font-family:'Noto Serif JP',serif;font-size:1rem;color:rgba(131,0,235,.55);letter-spacing:.2em}
+
+.container{max-width:880px;margin:0 auto;padding:0 2rem}
+.divider{height:1px;background:linear-gradient(to right,transparent,var(--border),transparent)}
+
+/* contact */
+.kf-hero{text-align:center;padding:9rem 2rem 2.5rem;position:relative}
+.kf-hero::before{content:'';position:absolute;top:10%;left:50%;transform:translateX(-50%);width:700px;max-width:100%;height:600px;background:radial-gradient(ellipse,rgba(131,0,235,.12) 0%,transparent 70%);pointer-events:none}
+.kf-label{font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.35em;color:var(--gold);text-transform:uppercase;margin-bottom:1.2rem}
+.kf-headline{font-family:'Cinzel',serif;font-size:clamp(2rem,5vw,3rem);font-weight:700;line-height:1.2;color:var(--cream);margin-bottom:1.2rem}
+.kf-headline em{font-style:normal;color:var(--green)}
+.kf-sub{font-size:clamp(1.05rem,2.4vw,1.25rem);color:var(--cream-dim);max-width:600px;margin:0 auto;line-height:1.85}
+.kf-sektion{padding:1rem 1.25rem 5rem;flex:1}
+.btn-primary{display:inline-block;width:100%;padding:1.05rem 2rem;background:var(--violet);color:#fff;border:0;border-radius:3px;font-family:'Cinzel',serif;font-size:.9rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 30px rgba(131,0,235,.45);transition:transform .2s,box-shadow .2s}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 45px rgba(131,0,235,.65)}
+.btn-primary[disabled]:hover{transform:none}
+
+    .kf-box { max-width: 680px; margin: 0 auto; background: var(--dark-card); border: 1px solid var(--border); border-radius: 8px; padding: 40px 36px; text-align: left; }
+    .kf-form { position: relative; }
+    .kf-feld { display: flex; flex-direction: column; gap: 7px; margin-bottom: 18px; }
+    .kf-feld label, .kf-an-frage { font-family: 'Cinzel',serif; font-size: 0.74rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-light); }
+    .kf-feld input, .kf-feld textarea { background: rgba(6,3,15,.75); border: 1px solid var(--border); border-radius: 3px; padding: 13px 16px; color: var(--cream); font-family: 'Crimson Pro',Georgia,serif; font-size: 1.02rem; transition: border-color .25s; width: 100%; box-sizing: border-box; }
+    .kf-feld input:focus, .kf-feld textarea:focus { outline: none; border-color: var(--violet); }
+    .kf-feld textarea { resize: vertical; min-height: 160px; line-height: 1.6; }
+    .kf-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+    .kf-an { margin-bottom: 22px; }
+    .kf-an-frage { display: block; margin-bottom: 10px; }
+    .kf-an-optionen { display: flex; gap: 10px; flex-wrap: wrap; }
+    .kf-an-option { flex: 1 1 140px; display: flex; align-items: center; gap: 11px; background: rgba(6,3,15,.75); border: 1px solid var(--border); border-radius: 3px; padding: 13px 18px; cursor: pointer; }
+    .kf-an-option:has(input:checked) { border-color: var(--violet); }
+    .kf-an-option input { accent-color: var(--violet); margin: 0; }
+    .kf-an-option span { font-family: 'Crimson Pro',Georgia,serif; color: var(--cream); }
+    .kf-meldung { margin-top: 16px; font-size: 0.97rem; line-height: 1.6; display: none; }
+    .kf-meldung.gut { display: block; color: var(--green); }
+    .kf-meldung.schlecht { display: block; color: #ff8a8a; }
+    .kf-hinweis { font-size: 0.86rem; color: var(--cream-dim); font-style: italic; margin-top: 18px; line-height: 1.6; }
+    .kf-hinweis a { color: var(--gold-light); }
+    button[disabled] { opacity: .6; cursor: wait; }
+    @media (max-width: 600px) { .kf-box { padding: 28px 20px; } }
+
+/* footer */
+footer{padding:2.5rem 2rem;text-align:center;border-top:1px solid var(--border);position:relative;z-index:1}
+.footer-brand{font-family:'Cinzel',serif;font-size:.75rem;letter-spacing:.2em;color:var(--gold);margin-bottom:.8rem}
+.footer-links{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap}
+.footer-links a{color:rgba(240,235,226,.3);text-decoration:none;font-size:.82rem;letter-spacing:.1em;transition:color .3s}
+.footer-links a:hover{color:var(--cream-dim)}
+.footer-copy{margin-top:.8rem;font-size:.76rem;color:rgba(240,235,226,.2)}
+
+@media(max-width:760px){
+  body{font-size:18px}
+  nav{padding:1rem 1.2rem}
+  .nav-kanji{display:none}
+  .kf-hero{padding:7rem 1.25rem 2rem}
+}
+</style>
+</head>
+<body>
+
+<div class="kanji-bg" aria-hidden="true"><img src="/images/logo.webp" alt="" width="800" height="800"></div>
+
+<nav>
+  <a class="nav-brand" href="/" style="text-decoration:none">
+    <img class="nav-mark" src="/images/logo.webp" alt="Japanese Grimoire Society logo" width="34" height="34">
+    <span class="nav-logo">Japanese Grimoire Society</span>
+  </a>
+  <div class="nav-kanji">&#x81E8;&#x5175;&#x95D8;&#x8005;&#x7686;&#x9663;&#x5217;&#x5728;&#x524D;</div>
+</nav>
+
+<div class="page-wrapper">
+
+  <section class="kf-hero">
+    <p class="kf-label">Contact</p>
+    <h1 class="kf-headline">Write to <em>Mark</em>.</h1>
+    <p class="kf-sub">A question about the practice, the Society or a live event? Whatever you write here goes straight to me. I spend much of the year in Japan, so I usually reply within a few days.</p>
+  </section>
+
+  <section class="kf-sektion">
+    <div class="kf-box">
+      <form id="kf-form" class="kf-form" novalidate>
+          <div class="kf-hp" aria-hidden="true">
+            <label>Please leave this field empty
+              <input type="text" name="webseite" tabindex="-1" autocomplete="off"></label>
+          </div>
+          <div class="kf-feld">
+            <label for="kf-name">Your name</label>
+            <input id="kf-name" name="name" type="text" maxlength="120" autocomplete="name">
+          </div>
+          <div class="kf-feld">
+            <label for="kf-mail">Your email address</label>
+            <input id="kf-mail" name="email" type="email" maxlength="200" required autocomplete="email">
+          </div>
+          <div class="kf-feld">
+            <label for="kf-text">Your message</label>
+            <textarea id="kf-text" name="nachricht" maxlength="5000" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Send message</button>
+          <p class="kf-meldung" data-meldung role="status" aria-live="polite"></p>
+        </form>
+        <p class="kf-hinweis">I use your details only to reply to you. You will not be added to any mailing list. More in the <a href="/privacy.html">Privacy Policy</a>.</p>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p class="footer-brand">JAPANESE GRIMOIRE SOCIETY</p>
+  <div class="footer-links">
+    <a href="https://japanesegrimoire.com">japanesegrimoire.com</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/impressum.html">Impressum</a>
+  </div>
+  <p class="footer-copy">&copy; 2026 Dr. Mark Hosak &middot; japanesegrimoire.com &middot; All rights reserved.</p>
+</footer>
+
+<script>
+(function () {
+  var K = {"api": "https://www.shingon-reiki.com/api/kontakt", "seite": "japanese-grimoire", "sprache": "en", "email": "Please enter a valid email address.", "kurz": "Please write a few more words so I can give you a helpful reply.", "fehler": "That did not go through. Please try again a little later.", "okMark": "Received. Thank you for your message – I will get back to you.", "okEileen": "Received. Eileen will get back to you.", "sendet": "Sending …"};
+  var form = document.getElementById('kf-form');
+  if (!form) return;
+  var geladen = Date.now();
+  var meldung = form.querySelector('[data-meldung]');
+  function zeige(text, gut) { meldung.className = 'kf-meldung ' + (gut ? 'gut' : 'schlecht'); meldung.textContent = text; }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var knopf = form.querySelector('button[type="submit"]');
+    var daten = {};
+    new FormData(form).forEach(function (v, k) { daten[k] = v; });
+    daten.geladen = geladen; daten.seite = K.seite; daten.sprache = K.sprache;
+    if (!daten.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(daten.email).trim())) { zeige(K.email); return; }
+    if (!daten.nachricht || String(daten.nachricht).trim().length < 15) { zeige(K.kurz); return; }
+    var alterText = knopf.textContent;
+    knopf.disabled = true; knopf.textContent = K.sendet; meldung.className = 'kf-meldung';
+    fetch(K.api, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(daten) })
+      .then(function (r) { return r.json().catch(function () { return {}; }); })
+      .then(function (a) {
+        if (a && a.ok) { form.reset(); zeige(daten.an === 'eileen' ? K.okEileen : K.okMark, true); }
+        else { zeige((a && a.meldung) || K.fehler); }
+      })
+      .catch(function () { zeige(K.fehler); })
+      .then(function () { knopf.disabled = false; knopf.textContent = alterText; });
+  });
+})();
+</script>
+</body>
+</html>
