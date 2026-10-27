@@ -90,7 +90,13 @@ footer{padding:2.5rem 2rem;text-align:center;border-top:1px solid var(--border);
   .nav-kanji{display:none}
   .kf-hero{padding:7rem 1.25rem 2rem}
 }
-</style>
+
+    .kf-box + .kf-box { margin-top: 28px; }
+    .kf-wa-titel { margin-bottom: 10px; }
+    .kf-wa-direkt { text-align: center; margin: 6px 0 26px; }
+    .kf-wa-direkt a { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; }
+    .kf-wa-titel { font-family: 'Cinzel', serif; color: var(--gold-light); font-size: 1.25rem; font-weight: 600; } .kf-intro { color: var(--cream-dim); margin-bottom: 1rem; line-height: 1.7; } .kf-wa-direkt a { width: auto; max-width: 100%; }
+  </style>
 </head>
 <body>
 
@@ -136,6 +142,38 @@ footer{padding:2.5rem 2rem;text-align:center;border-top:1px solid var(--border);
         </form>
         <p class="kf-hinweis">I use your details only to reply to you. You will not be added to any mailing list. More in the <a href="/privacy.html">Privacy Policy</a>.</p>
     </div>
+      <div class="kf-box">
+        <h3 class="kf-wa-titel">Prefer WhatsApp?</h3>
+        <p class="kf-intro">Some things are quicker to sort out in a chat than in a long email. This goes straight to my WhatsApp.</p>
+        <p class="kf-wa-direkt"><a href="https://wa.me/message/JELAZCLD5AOQG1" target="_blank" rel="noopener noreferrer" class="btn-primary"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:-3px;margin-right:8px"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4-.1-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3-.4-4.3-1.2l-.3-.2-3.1.8.8-3-.2-.3c-.8-1.3-1.3-2.8-1.3-4.4 0-4.5 3.7-8.2 8.2-8.2s8.2 3.7 8.2 8.2-3.6 8.3-8 8.3z"/></svg>Message me on WhatsApp</a></p>
+        <p class="kf-intro">Or leave your number and I&rsquo;ll message you there:</p>
+        <form id="kf-form-wa" class="kf-form" novalidate>
+          <input type="hidden" name="weg" value="whatsapp">
+          <div class="kf-hp" aria-hidden="true">
+            <label>Please leave this field empty
+              <input type="text" name="webseite" tabindex="-1" autocomplete="off"></label>
+          </div>
+          <div class="kf-feld">
+            <label for="kf-wa-name">Your name</label>
+            <input id="kf-wa-name" name="name" type="text" maxlength="120" autocomplete="name">
+          </div>
+          <div class="kf-feld">
+            <label for="kf-wa-mail">Your email address</label>
+            <input id="kf-wa-mail" name="email" type="email" maxlength="200" required autocomplete="email">
+          </div>
+          <div class="kf-feld">
+            <label for="kf-wa-nr">Your WhatsApp number &middot; incl. country code</label>
+            <input id="kf-wa-nr" name="whatsapp" type="tel" maxlength="40" required placeholder="+49 170 1234567" autocomplete="tel">
+          </div>
+          <div class="kf-feld">
+            <label for="kf-wa-text">What is it about? &middot; optional</label>
+            <textarea id="kf-wa-text" name="nachricht" maxlength="5000" style="min-height:90px;"></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Leave my number</button>
+          <p class="kf-meldung" data-meldung role="status" aria-live="polite"></p>
+        </form>
+        <p class="kf-hinweis">I use your details only to reply to you. You will not be added to any mailing list. More in the <a href="/privacy.html">Privacy Policy</a>.</p>
+      </div>
   </section>
 
 </div>
@@ -153,31 +191,37 @@ footer{padding:2.5rem 2rem;text-align:center;border-top:1px solid var(--border);
 
 <script>
 (function () {
-  var K = {"api": "https://www.shingon-reiki.com/api/kontakt", "seite": "japanese-grimoire", "sprache": "en", "email": "Please enter a valid email address.", "kurz": "Please write a few more words so I can give you a helpful reply.", "fehler": "That did not go through. Please try again a little later.", "okMark": "Received. Thank you for your message – I will get back to you.", "okEileen": "Received. Eileen will get back to you.", "sendet": "Sending …"};
-  var form = document.getElementById('kf-form');
-  if (!form) return;
+  var K = {"api": "https://www.shingon-reiki.com/api/kontakt", "seite": "japanese-grimoire", "sprache": "en", "email": "Please enter a valid email address.", "kurz": "Please write a few more words so I can give you a helpful reply.", "fehler": "That did not go through. Please try again a little later.", "okMark": "Received. Thank you for your message – I will get back to you.", "okEileen": "Received. Eileen will get back to you.", "sendet": "Sending …", "okWa": "Received. I’ll message you on WhatsApp.", "nummer": "Please enter your number including the country code."};
   var geladen = Date.now();
-  var meldung = form.querySelector('[data-meldung]');
-  function zeige(text, gut) { meldung.className = 'kf-meldung ' + (gut ? 'gut' : 'schlecht'); meldung.textContent = text; }
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var knopf = form.querySelector('button[type="submit"]');
-    var daten = {};
-    new FormData(form).forEach(function (v, k) { daten[k] = v; });
-    daten.geladen = geladen; daten.seite = K.seite; daten.sprache = K.sprache;
-    if (!daten.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(daten.email).trim())) { zeige(K.email); return; }
-    if (!daten.nachricht || String(daten.nachricht).trim().length < 15) { zeige(K.kurz); return; }
-    var alterText = knopf.textContent;
-    knopf.disabled = true; knopf.textContent = K.sendet; meldung.className = 'kf-meldung';
-    fetch(K.api, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(daten) })
-      .then(function (r) { return r.json().catch(function () { return {}; }); })
-      .then(function (a) {
-        if (a && a.ok) { form.reset(); zeige(daten.an === 'eileen' ? K.okEileen : K.okMark, true); }
-        else { zeige((a && a.meldung) || K.fehler); }
-      })
-      .catch(function () { zeige(K.fehler); })
-      .then(function () { knopf.disabled = false; knopf.textContent = alterText; });
-  });
+  function binde(id) {
+    var form = document.getElementById(id);
+    if (!form) return;
+    var meldung = form.querySelector('[data-meldung]');
+    function zeige(text, gut) { meldung.className = 'kf-meldung ' + (gut ? 'gut' : 'schlecht'); meldung.textContent = text; }
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var knopf = form.querySelector('button[type="submit"]');
+      var daten = {};
+      new FormData(form).forEach(function (v, k) { daten[k] = v; });
+      daten.geladen = geladen; daten.seite = K.seite; daten.sprache = K.sprache;
+      var wa = daten.weg === 'whatsapp';
+      if (!daten.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(daten.email).trim())) { zeige(K.email); return; }
+      if (wa && (!daten.whatsapp || String(daten.whatsapp).trim().length < 6)) { zeige(K.nummer); return; }
+      if (!wa && (!daten.nachricht || String(daten.nachricht).trim().length < 15)) { zeige(K.kurz); return; }
+      var alterText = knopf.textContent;
+      knopf.disabled = true; knopf.textContent = K.sendet; meldung.className = 'kf-meldung';
+      fetch(K.api, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(daten) })
+        .then(function (r) { return r.json().catch(function () { return {}; }); })
+        .then(function (a) {
+          if (a && a.ok) { form.reset(); zeige(wa ? K.okWa : (daten.an === 'eileen' ? K.okEileen : K.okMark), true); }
+          else { zeige((a && a.meldung) || K.fehler); }
+        })
+        .catch(function () { zeige(K.fehler); })
+        .then(function () { knopf.disabled = false; knopf.textContent = alterText; });
+    });
+  }
+  binde('kf-form');
+  binde('kf-form-wa');
 })();
 </script>
 </body>
