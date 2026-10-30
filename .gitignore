@@ -1,3 +1,4 @@
 public/images/*.webp
 public/images/*.png
+!public/images/hero-bg.webp
 !public/images/blog/
