@@ -44,6 +44,18 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.2rem 2.5rem;
 .nav-mark{width:34px;height:34px;border-radius:50%;display:block;
   box-shadow:0 0 12px rgba(131,0,235,.45)}
 .nav-logo{font-family:'Cinzel',serif;font-size:.88rem;font-weight:600;letter-spacing:.15em;color:var(--gold);text-transform:uppercase}
+.nav-mini{display:flex;gap:1.1rem;list-style:none;flex-wrap:wrap;justify-content:flex-end}
+.nav-mini a{font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(240,235,226,.75);text-decoration:none}
+.nav-mini a:hover{color:var(--gold-light)}
+.latest{padding:5rem 0}
+.latest-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1.4rem;margin-top:1rem}
+.latest-card{background:var(--dark-card);border:1px solid var(--border);border-radius:6px;overflow:hidden;text-decoration:none;color:var(--cream);transition:transform .25s,border-color .25s}
+.latest-card:hover{transform:translateY(-4px);border-color:var(--gold)}
+.latest-card img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block}
+.latest-card span{display:block;padding:.9rem 1rem 1.1rem;font-family:'Cinzel',serif;font-size:.92rem;line-height:1.4}
+.latest-more{text-align:center;margin-top:2rem}
+.latest-more a{color:var(--gold-light);font-family:'Cinzel',serif;font-size:.8rem;letter-spacing:.15em;text-transform:uppercase}
+.footer-disclaimer{max-width:760px;margin:1.2rem auto 0;font-size:.72rem;line-height:1.6;color:rgba(240,235,226,.38)}
 .nav-kanji{font-family:'Noto Serif JP',serif;font-size:1rem;color:rgba(131,0,235,.55);letter-spacing:.2em}
 
 
@@ -276,6 +288,7 @@ footer{padding:2.5rem 2rem;text-align:center;border-top:1px solid var(--border);
   .optin-card{padding:2.5rem 1.5rem}
   nav{padding:1rem 1.2rem}
   .nav-kanji{display:none}
+  .nav-mini{display:none}
 }
 </style>
 </head>
@@ -289,7 +302,14 @@ footer{padding:2.5rem 2rem;text-align:center;border-top:1px solid var(--border);
     <img class="nav-mark" src="images/logo.webp" alt="Japanese Grimoire Society logo" width="34" height="34">
     <span class="nav-logo">Japanese Grimoire Society</span>
   </div>
-  <div class="nav-kanji">&#x81E8;&#x5175;&#x95D8;&#x8005;&#x7686;&#x9663;&#x5217;&#x5728;&#x524D;</div>
+  <ul class="nav-mini">
+    <li><a href="/kuji-kiri">Kuji Kiri</a></li>
+    <li><a href="/anime-real-japan">Anime &rarr; Real</a></li>
+    <li><a href="/yokai-kami">Yokai &amp; Kami</a></li>
+    <li><a href="/esoteric-japan">Esoteric Japan</a></li>
+    <li><a href="/sacred-places">Sacred Places</a></li>
+    <li><a href="/blog/">Blog</a></li>
+  </ul>
 </nav>
 
 <div class="page-wrapper">
@@ -421,6 +441,19 @@ footer{padding:2.5rem 2rem;text-align:center;border-top:1px solid var(--border);
 
   <div class="divider"></div>
 
+<!--LATEST-->
+  <div class="divider"></div>
+  <section class="latest reveal">
+    <div class="container" style="max-width:1100px">
+      <p class="section-label" style="text-align:center">From the grimoire</p>
+      <h2 class="section-title" style="text-align:center;margin-bottom:1.5rem">What anime borrowed from real Japan</h2>
+      <div class="latest-grid"><a class="latest-card" href="/blog/kuji-kiri-nine-hand-seals"><img src="/images/blog/kuji-kiri-nine-hand-seals-card.webp" alt="A mountain ascetic in white robes stands before a waterfall at night, a grid of golden light glowing in the air" width="800" height="450" loading="lazy"><span>Kuji Kiri: The Nine Hand Seals and Where They Really Come From</span></a></div>
+      <p class="latest-more"><a href="/blog/">All articles &rarr;</a></p>
+    </div>
+  </section>
+  <div class="divider"></div>
+<!--/LATEST-->
+
   <section class="credentials section-pad reveal">
     <div class="container">
       <div class="credentials-inner">
@@ -462,10 +495,12 @@ footer{padding:2.5rem 2rem;text-align:center;border-top:1px solid var(--border);
   <p class="footer-brand">JAPANESE GRIMOIRE SOCIETY</p>
   <div class="footer-links">
     <a href="https://japanesegrimoire.com">japanesegrimoire.com</a>
+    <a href="/blog/">Blog</a>
     <a href="/contact.html">Contact</a>
     <a href="/privacy.html">Privacy Policy</a>
     <a href="/impressum.html">Impressum</a>
   </div>
+  <p class="footer-disclaimer">Japanese Grimoire is an independent project and is not affiliated with any anime or manga series, studio or publisher. Series names are trademarks of their respective owners.</p>
   <p class="footer-copy">&copy; 2026 Dr. Mark Hosak &middot; japanesegrimoire.com &middot; All rights reserved.</p>
 </footer>
 
