@@ -78,6 +78,7 @@ def head(title, desc, path, image, og_type='website', ld=(), preload=None):
 <meta name="twitter:image" content="{img}">
 <link rel="icon" type="image/webp" href="/images/logo.webp">
 <link rel="stylesheet" href="/fonts/google-selbst.css">
+<link rel="stylesheet" href="/fonts/source-serif.css">
 <link rel="stylesheet" href="/assets/site.css">
 {pre}{jsonld(ld)}
 </head>
