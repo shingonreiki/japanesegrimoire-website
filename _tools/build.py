@@ -213,7 +213,7 @@ def build_article(a, arts):
 
 def build_hub(h, arts):
     path = '/' + h['slug']
-    mine = [a for a in arts if a['hub'] == h['slug'] or h['slug'] in a.get('also', [])]
+    mine = [a for a in arts if a['hub'] == h['slug']] + [a for a in arts if a['hub'] != h['slug'] and h['slug'] in a.get('also', [])]
     img = '/images/blog/%s.webp' % mine[0]['slug'] if mine else '/images/hero-bg.webp'
     items = [('Home', '/'), (h['name'], None)]
     ld = [{"@context": "https://schema.org", "@type": "CollectionPage", "name": h['title'], "description": h['description'],
