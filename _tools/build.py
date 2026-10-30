@@ -105,7 +105,7 @@ def footer():
 <div class="foot-grid">
 <div><p class="foot-brand">JAPANESE GRIMOIRE</p><p>The real Japanese traditions behind the hand signs, spirits and sacred places you know from anime. Written by Dr. Mark Hosak, Japanologist (PhD, Heidelberg), Shingon practitioner and researcher.</p></div>
 <div><h4>Explore</h4><ul>{hubs}<li><a href="/blog/">All articles</a></li></ul></div>
-<div><h4>Go deeper</h4><ul><li><a href="{SKOOL}">Japanese Grimoire Society</a></li><li><a href="/#join">Free practice by email</a></li><li><a href="https://www.shingon-reiki.com/en/kuji-kiri">Kuji Kiri live events</a></li><li><a href="/shingon-reiki-level-1">Shingon Reiki Level 1</a></li><li><a href="https://www.shingon-reiki.com/en/japan">Journey to Japan 2027</a></li></ul></div>
+<div><h4>Go deeper</h4><ul><li><a href="{SKOOL}">Japanese Grimoire Society</a></li><li><a href="/#join">Free practice by email</a></li><li><a href="https://www.shingon-reiki.com/en/kuji-kiri">Kuji Kiri live events</a></li><li><a href="https://markhosak.my-ablefy.com/s/markhosak/kuji-kiri-level-1-online-course?locale=en">Kuji Kiri Level 1 Online Course</a></li><li><a href="/shingon-reiki-level-1">Shingon Reiki Level 1</a></li><li><a href="https://www.shingon-reiki.com/en/japan">Journey to Japan 2027</a></li></ul></div>
 <div><h4>Info</h4><ul><li><a href="/contact.html">Contact</a></li><li><a href="/privacy.html">Privacy Policy</a></li><li><a href="/impressum.html">Impressum</a></li><li><a href="https://www.instagram.com/japanesegrimoire">Instagram</a></li><li><a href="https://www.youtube.com/channel/UCn7IHhHHqZ7LP4aqaCtLM5w">YouTube</a></li></ul></div>
 </div>
 <p class="disclaimer">Japanese Grimoire is an independent project and is not affiliated with, endorsed by or connected to any anime or manga series, studio or publisher. Series and character names are trademarks of their respective owners and are mentioned for commentary only. All illustrations on this site are original artwork. Articles share history and background, not medical advice.<br>&copy; {datetime.date.today().year} Dr. Mark Hosak &middot; japanesegrimoire.com</p>
@@ -314,6 +314,7 @@ def build_llms(arts):
                 L.append('- [%s](%s/blog/%s): %s' % (a['h1'], SITE, a['slug'], a['description']))
         L.append('')
     L += ['## Offers', '- Kuji Kiri live events and Master Path: https://www.shingon-reiki.com/en/kuji-kiri',
+          '- Kuji Kiri Level 1 Online Course: https://markhosak.my-ablefy.com/s/markhosak/kuji-kiri-level-1-online-course?locale=en',
           '- Shingon Reiki Level 1 (English, live online): ' + SR1,
           '- Spiritual journey to Japan, May 2027: https://www.shingon-reiki.com/en/japan', '']
     open(os.path.join(PUB, 'llms.txt'), 'w', encoding='utf-8').write('\n'.join(L))
