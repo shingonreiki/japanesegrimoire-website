@@ -113,6 +113,7 @@ def footer():
 </div>
 </footer>
 <script src="/assets/site.js" defer></script>
+<script src="/assets/abschied.js" defer></script>
 </body>
 </html>
 '''
