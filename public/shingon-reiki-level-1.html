@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" data-mode="waitlist">
+<html lang="en">
 <!--
 ═══════════════════════════════════════════════════════════════════
-  SHINGON REIKI LEVEL 1 — Warteliste / Termin
+  SHINGON REIKI LEVEL 1 — Termine
   Datei: shingon-reiki-level-1.html  →  japanesegrimoire.com/shingon-reiki-level-1
 
-  SO SCHALTEST DU UM (das ist alles):
-
-  KEIN TERMIN FEST:   <html lang="en" data-mode="waitlist">
-  TERMIN STEHT:       <html lang="en" data-mode="date">
-
-  Bei "date" zusätzlich die drei Felder unten im Block DATE ausfüllen
-  (Datum, Uhrzeit, Buchungslink). Sonst nichts anfassen.
+  Aktuell: Marks Live Event 19.–20.12.2026 + Eileens Live Event 16.–17.01.2027.
+  Termin ändern: im Block "MARKS EVENT" Datum, Uhrzeit, Buchungslink anpassen
+  und das JSON-LD im <head> mitziehen.
+  Der frühere Wartelisten-Block (Brevo-Formular) wurde entfernt, als die
+  Termine feststanden; er liegt in der Git-Historie (Commit d072118).
 ═══════════════════════════════════════════════════════════════════
 -->
 <head>
@@ -89,13 +87,27 @@ em{color:var(--cream);font-style:italic}
 footer{text-align:center;margin-top:56px;font-size:14px;color:rgba(240,235,226,0.45)}
 footer a{color:rgba(240,235,226,0.6)}
 
-/* ---- Modus-Umschaltung: nichts hier ändern ---- */
-[data-mode="waitlist"] .only-date{display:none}
-[data-mode="date"] .only-waitlist{display:none}
 </style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@graph": [
+{
+  "@type": "Event",
+  "@id": "https://japanesegrimoire.com/shingon-reiki-level-1#mark",
+  "name": "Shingon Reiki Level 1 with Dr. Mark Hosak",
+  "description": "Two-day live initiation in English with Dr. Mark Hosak, online.",
+  "startDate": "2026-12-19T17:00+01:00",
+  "endDate": "2026-12-20T23:00+01:00",
+  "inLanguage": "en",
+  "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "location": { "@type": "VirtualLocation", "url": "https://japanesegrimoire.com/shingon-reiki-level-1" },
+  "performer": { "@type": "Person", "name": "Mark Hosak" },
+  "organizer": { "@type": "Person", "name": "Mark Hosak" },
+  "offers": { "@type": "Offer", "price": "497", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://markhosak.my-ablefy.com/s/markhosak/shingon-reiki-level-1?locale=en" }
+},
+{
   "@type": "Event",
   "@id": "https://japanesegrimoire.com/shingon-reiki-level-1#eileen",
   "name": "Shingon Reiki Level 1 with Eileen Wiesmann",
@@ -109,6 +121,8 @@ footer a{color:rgba(240,235,226,0.6)}
   "performer": { "@type": "Person", "name": "Eileen Wiesmann" },
   "organizer": { "@type": "Person", "name": "Eileen Wiesmann" },
   "offers": { "@type": "Offer", "price": "497", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://japanesegrimoire.com/shingon-reiki-level-1#eileen" }
+}
+  ]
 }
 </script>
 </head>
@@ -130,37 +144,16 @@ footer a{color:rgba(240,235,226,0.6)}
 
   <div class="rule"></div>
 
-  <!-- ═══════════ BLOCK: TERMIN STEHT FEST (data-mode="date") ═══════════ -->
-  <div class="only-date">
-    <div class="card">
-      <h2>The next opening</h2>
-
-      <!-- ▼▼▼ HIER DIE DREI FELDER AUSFÜLLEN ▼▼▼ -->
-      <div class="when">10–11 October 2026</div>
-      <div class="when-note">Live online · small group · both days</div>
-      <a class="btn" href="https://go.markhosak.com">Take my place</a>
-      <!-- ▲▲▲ Datum · Zusatzzeile · Buchungslink ▲▲▲ -->
-
-      <div class="fineprint">Places are limited because the group stays small.</div>
-    </div>
+  <!-- ═══════════ MARKS EVENT ═══════════ -->
+  <div class="card" id="mark">
+    <h2>The next opening</h2>
+    <div class="when">December 19–20, 2026</div>
+    <div class="when-note">Held by Dr. Mark Hosak · live online · small group<br>5–11 pm German time (CET) each day · that's 11 am–5 pm Eastern / 8 am–2 pm Pacific · $497</div>
+    <a class="btn" href="https://markhosak.my-ablefy.com/s/markhosak/shingon-reiki-level-1?locale=en">Take my place</a>
+    <div class="fineprint">Places are limited because the group stays small.</div>
   </div>
 
-  <!-- ═══════════ BLOCK: KEIN TERMIN (data-mode="waitlist") ═══════════ -->
-  <div class="only-waitlist">
-    <div class="card">
-      <h2>The next date is not set yet</h2>
-      <div class="sub">I open Level 1 only a few times a year. The people on this list hear the date first — and the groups fill from that list.</div>
-
-      <iframe class="formframe"
-        src="https://dc276ca0.sibforms.com/serve/MUIFANwBK8EYzKwnNJk1dkjKWtXDSnKeqIBPWg5dGZiKOzWc8tP-WR4ba_T39Qi0wL7UM12o2Z7BVuRHF4nn_JzPQBYspxcSBrUNd-rA6SlR3TF44gvb8sj4auMbf-U8agfdkh3K94tAfzpCQG03CFgAKTwz5wXClsVgbtbU9iUpyHC84jHeM2fyMxB2i_JNM8oRDrVswDFlTVzMJg=="
-        frameborder="0" scrolling="auto" allowfullscreen
-        title="Shingon Reiki Level 1 waitlist"></iframe>
-
-      <div class="fineprint">No date, no payment, nothing to decide today.</div>
-    </div>
-  </div>
-
-  <!-- ═══════════ EILEENS EVENT (immer sichtbar, unabhängig von data-mode) ═══════════ -->
+  <!-- ═══════════ EILEENS EVENT ═══════════ -->
   <div class="card" id="eileen">
     <h2>Also in English: Level&nbsp;1 with Eileen Wiesmann</h2>
     <div class="sub">Eileen Wiesmann's own live event. Five initiations across two days — four to the source, Dainichi Nyorai, and one to the Medicine Buddha, Yakushi Nyorai.</div>
