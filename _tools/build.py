@@ -318,6 +318,7 @@ def build_llms(arts):
     L += ['## Offers', '- Kuji Kiri live events and Master Path: https://www.shingon-reiki.com/en/kuji-kiri',
           '- Kuji Kiri Level 1 Online Course: https://markhosak.my-ablefy.com/s/markhosak/kuji-kiri-level-1-online-course?locale=en',
           '- Shingon Reiki Level 1 (English, live online): ' + SR1,
+          '- Shingon Reiki Level 1 with Eileen Wiesmann (English, live online, January 16–17, 2027, 5–11 pm German time; Eileen Wiesmann\'s own event, not included in Premium or VIP community memberships): %s/shingon-reiki-level-1#eileen' % SITE,
           '- Spiritual journey to Japan, May 2027: https://www.shingon-reiki.com/en/japan', '']
     open(os.path.join(PUB, 'llms.txt'), 'w', encoding='utf-8').write('\n'.join(L))
 
